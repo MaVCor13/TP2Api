@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import Temperature2m from './Componentes/Temperature2m';
 import UVIndex from './Componentes/UVIndex';
 import Visibility from './Componentes/Visibility';
@@ -14,22 +13,20 @@ class WeatherDashboard extends Component {
   }
 
   componentDidMount() {
-    // Realiza una solicitud a la API de clima
-    axios.get('https://open-meteo.com', {
-      params: {
-        latitude: -22.5164,
-        longitude: -63.8013,
-        current_weather: true,
-        timezone: 'auto',
-      },
-    })
-    .then((response) => {
-      // Al recibir los datos de la API, actualiza el estado
-      this.setState({ currentWeather: response.data.current_weather });
-    })
-    .catch((error) => {
-      console.error('Error al obtener los datos del clima:', error);
-    });
+    // Simulamos una solicitud a la API cargando datos desde el archivo data.json
+    fetch('/public/data.json')
+    // Ajusta la ruta según la ubicación del archivo JSON en "public".
+      .then(response => response.json())
+      .then(data => {
+        // Agrega una declaración console.log para registrar los datos cargados desde el archivo JSON
+        console.log('Datos cargados desde data.json:', data);
+
+        // Actualiza el estado con los datos cargados desde el archivo JSON
+        this.setState({ currentWeather: data });
+      })
+      .catch(error => {
+        console.error('Error al cargar los datos desde data.json:', error);
+      });
   }
 
   render() {

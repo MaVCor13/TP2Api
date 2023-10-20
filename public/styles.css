@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("icono fondo clima.jpg");
+  background-size: cover;
+}
+
+.project-container {
+  display: flex;
+  width: 50%;
+}
+
+.weather-dashboard,
+.info-section {
+  width: 50%;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(42, 252, 234, 0.6);
+  color: rgb(58, 51, 51);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.weather-dashboard h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.weather-dashboard .weather-icon img {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-dashboard .temperature p {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.weather-dashboard .location p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.weather-dashboard .clock img {
+  width: 40px;
+  height: 40px;
+}
+
+.weather-dashboard .clock p {
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+.info-box {
+  background-color: rgba(252, 236, 18, 0.932);
+  color: rgb(48, 48, 38);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-box h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.info-box p {
+  font-size: 16px;
+  margin: 0;
+}
+
+  
